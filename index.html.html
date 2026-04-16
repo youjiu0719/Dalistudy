@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳洲木工職人實戰計畫 | 大理國際 Dali Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #fcfaf8; }
+        .hero-section {
+            background: linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 24, 16, 0.7)), url('https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover; background-position: center;
+        }
+        
+        /* 確保所有輸入框齊平與美觀 */
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #d1d5db;
+            background-color: white;
+            transition: all 0.2s;
+            outline: none;
+            box-sizing: border-box;
+            height: 3.5rem;
+            font-size: 1rem;
+        }
+        .form-input:focus {
+            border-color: #b45309;
+            box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.15);
+        }
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #44403c;
+            margin-bottom: 0.5rem;
+        }
+        .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        
+        /* 單選卡片樣式 */
+        .card-radio:checked + .card-content {
+            border-color: #b45309;
+            background-color: #fffbeb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section text-white py-24 px-6 text-center">
+        <h2 class="text-amber-400 font-bold tracking-widest mb-3 uppercase text-sm text-shadow">Dali International Study</h2>
+        <h1 class="text-4xl md:text-6xl font-bold mb-8 tracking-tight text-shadow">澳洲木工職人實戰計畫</h1>
+        <p class="max-w-3xl mx-auto text-xl opacity-90 leading-relaxed font-light text-shadow">
+            從三級證書到四級證書，這不只是課堂學習，而是真正走進產業。<br>
+            結合理論＋工廠實作，打造「工廠即教室、學校即職場」的培訓模式。
+        </p>
+    </div>
+
+    <div class="max-w-5xl mx-auto -mt-16 mb-20 px-4">
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-stone-100">
+            
+            <div class="p-10 md:p-14 border-b border-stone-100">
+                <div class="flex flex-col md:flex-row justify-between items-start mb-12 gap-10">
+                    <div class="md:w-2/3">
+                        <h2 class="text-3xl font-bold text-stone-900 mb-6 flex items-center">
+                            <span class="text-amber-600 mr-4 text-4xl">|</span> GET 教育集團 · 專業優勢
+                        </h2>
+                        <p class="text-stone-600 text-lg leading-relaxed mb-6 font-light">
+                            我們與 <b>GET 教育集團</b> 合作，打造「工廠即教室、學校即職場」的培訓模式。學生在學習的同時，就在累積真實工作經驗，學得會、做得到、接得上工作。
+                        </p>
+                    </div>
+                    <div class="bg-amber-50 p-6 rounded-2xl border border-amber-100 md:w-1/3">
+                        <p class="text-amber-950 font-bold text-center">🏆 核心價值</p>
+                        <p class="text-amber-800 text-sm mt-2 text-center leading-relaxed">不是畢業後才開始找工作，而是在學習過程中，就已經進入職場。</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-stone-50 rounded-2xl border-l-4 border-amber-800 shadow-sm">
+                        <h3 class="font-bold text-stone-800 mb-2">技能導向</h3>
+                        <p class="text-sm text-stone-500">不是死讀書，重視實作能力，打造能在澳洲立足的一技之長。</p>
+                    </div>
+                    <div class="p-6 bg-stone-50 rounded-2xl border-l-4 border-amber-800 shadow-sm">
+                        <h3 class="font-bold text-stone-800 mb-2">產學接軌</h3>
+                        <p class="text-sm text-stone-500">真實工廠環境培訓，技術直接對接澳洲建築產業需求。</p>
+                    </div>
+                    <div class="p-6 bg-stone-50 rounded-2xl border-l-4 border-amber-800 shadow-sm">
+                        <h3 class="font-bold text-stone-800 mb-2">畢業即就業</h3>
+                        <p class="text-sm text-stone-500">在學期間累積職場資歷，打破「畢業即失業」的循環。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="survey" class="p-10 md:p-14 bg-stone-50/50">
+                <h3 class="text-3xl font-bold text-stone-900 mb-12 text-center tracking-tight">預約專業職涯評估</h3>
+                
+                <form id="daliForm" class="space-y-10">
+                    
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="form-label">中文全名</label>
+                                <input type="text" name="name" required placeholder="請輸入姓名" class="form-input">
+                            </div>
+                            <div>
+                                <label class="form-label">性別</label>
+                                <select name="gender" class="form-input">
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                    <option value="其他">其他 / 不便透露</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="form-label">出生年月日 (推算年齡用)</label>
+                                <input type="date" name="birthday" required class="form-input">
+                            </div>
+                            <div>
+                                <label class="form-label">是否有出國經驗</label>
+                                <select name="travel_exp" class="form-input">
+                                    <option value="無">尚未有出國經驗</option>
+                                    <option value="有短期旅遊">有（短期觀光旅遊）</option>
+                                    <option value="有長居經驗">有（曾在外國求學或工作）</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="form-label">LINE ID / 聯絡電話</label>
+                                <input type="text" name="phone" required placeholder="方便顧問聯繫的方式" class="form-input">
+                            </div>
+                            <div>
+                                <label class="form-label">最高學歷</label>
+                                <select name="education" class="form-input">
+                                    <option value="高中/職">高中 / 職</option>
+                                    <option value="專科/大學">專科 / 大學</option>
+                                    <option value="碩士以上">碩士以上</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-stone-200 pt-8">
+                        <label class="form-label text-base flex items-center mb-4">
+                            <span class="mr-2 text-amber-700">🎯</span> 您的澳洲計畫核心目的地？
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <label class="relative cursor-pointer">
+                                <input type="radio" name="goal" value="技術移民" class="sr-only peer" required>
+                                <div class="p-4 border border-stone-200 rounded-xl peer-checked:border-amber-600 peer-checked:bg-amber-50 transition text-center hover:bg-stone-50">
+                                    <span class="block text-xl mb-1">🇦🇺</span>
+                                    <span class="block font-bold text-stone-800">技術移民</span>
+                                    <span class="text-[10px] text-stone-500">規劃長期居留身份</span>
+                                </div>
+                            </label>
+                            <label class="relative cursor-pointer">
+                                <input type="radio" name="goal" value="高薪打工" class="sr-only peer">
+                                <div class="p-4 border border-stone-200 rounded-xl peer-checked:border-amber-600 peer-checked:bg-amber-50 transition text-center hover:bg-stone-50">
+                                    <span class="block text-xl mb-1">💰</span>
+                                    <span class="block font-bold text-stone-800">高薪打工</span>
+                                    <span class="text-[10px] text-stone-500">累積人生第一桶金</span>
+                                </div>
+                            </label>
+                            <label class="relative cursor-pointer">
+                                <input type="radio" name="goal" value="職人進修" class="sr-only peer">
+                                <div class="p-4 border border-stone-200 rounded-xl peer-checked:border-amber-600 peer-checked:bg-amber-50 transition text-center hover:bg-stone-50">
+                                    <span class="block text-xl mb-1">📐</span>
+                                    <span class="block font-bold text-stone-800">職人進修</span>
+                                    <span class="text-[10px] text-stone-500">獲取國際專業證照</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-stone-200 pt-8">
+                        <label class="form-label text-base flex items-center mb-1">
+                            <span class="mr-2 text-amber-700">💰</span> 預計投入的初步啟動資金？
+                        </label>
+                        <p class="text-xs text-stone-400 mb-4">（包含首期學費、機票及初期生活預備金）</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="budget" value="30萬以下" class="sr-only peer" required>
+                                <div class="p-3 text-center border border-stone-200 rounded-lg peer-checked:bg-amber-100 peer-checked:border-amber-600 peer-checked:text-amber-900 text-sm text-stone-600 transition">30萬以下</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="budget" value="30-50萬" class="sr-only peer">
+                                <div class="p-3 text-center border border-stone-200 rounded-lg peer-checked:bg-amber-100 peer-checked:border-amber-600 peer-checked:text-amber-900 text-sm text-stone-600 transition">30-50萬</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="budget" value="50-80萬" class="sr-only peer">
+                                <div class="p-3 text-center border border-stone-200 rounded-lg peer-checked:bg-amber-100 peer-checked:border-amber-600 peer-checked:text-amber-900 text-sm text-stone-600 transition">50-80萬</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="budget" value="80萬以上" class="sr-only peer">
+                                <div class="p-3 text-center border border-stone-200 rounded-lg peer-checked:bg-amber-100 peer-checked:border-amber-600 peer-checked:text-amber-900 text-sm text-stone-600 transition">80萬以上</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-stone-200 pt-8">
+                        <div>
+                            <label class="form-label">目前的英文程度 (IELTS/PTE)</label>
+                            <select name="english" class="form-input">
+                                <option value="尚未準備">尚未準備，需大理協助規劃</option>
+                                <option value="有基礎">已有基礎 (約 5.0 程度)</option>
+                                <option value="已達門檻">已達入學門檻 (5.5 - 6.0 以上)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="form-label">預計啟程時間</label>
+                            <input type="month" name="time" class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="border-t border-stone-200 pt-8">
+                        <label class="form-label flex items-center text-amber-900">
+                            <span class="mr-2">❓</span> 諮詢加點：您目前最想了解的細節是？
+                        </label>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button type="button" onclick="addTag('英文門檻與語言班')" class="text-[10px] bg-white border border-stone-300 px-3 py-1 rounded-full hover:bg-amber-50 transition"># 英文門檻</button>
+                            <button type="button" onclick="addTag('薪資待遇與就業機會')" class="text-[10px] bg-white border border-stone-300 px-3 py-1 rounded-full hover:bg-amber-50 transition"># 薪資待遇</button>
+                            <button type="button" onclick="addTag('住宿與生活成本')" class="text-[10px] bg-white border border-stone-300 px-3 py-1 rounded-full hover:bg-amber-50 transition"># 住宿成本</button>
+                            <button type="button" onclick="addTag('移民簽證路徑')" class="text-[10px] bg-white border border-stone-300 px-3 py-1 rounded-full hover:bg-amber-50 transition"># 移民路徑</button>
+                        </div>
+                        <textarea id="questionArea" name="question" rows="3" placeholder="請輸入您的疑問..." class="w-full p-4 rounded-xl border-stone-300 border focus:ring-2 focus:ring-amber-600 outline-none text-sm"></textarea>
+                    </div>
+
+                    <div class="pt-6">
+                        <button type="submit" id="submitBtn" class="w-full bg-amber-800 text-white py-6 rounded-2xl font-bold text-2xl hover:bg-amber-900 transition-all shadow-xl tracking-widest active:scale-[0.98]">
+                            送出評估 · 開啟澳洲職人之路
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-center text-stone-400 text-sm font-light">
+            <p>大理國際遊留學 Dali International Study © 2026</p>
+            <p class="mt-1">專業代辦 · 職涯規劃 · 澳洲實戰</p>
+        </div>
+    </div>
+
+    <script>
+        // 點擊標籤快速輸入
+        function addTag(text) {
+            const area = document.getElementById('questionArea');
+            if (area.value.includes(text)) return;
+            area.value += (area.value ? '、' : '') + text;
+        }
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxS99z6nYnJdLD_UqH7WeKYk1GKfGJWJHDxyg35XDcpX-6gRsNPpIGccDvjkPloG54d/exec';
+        const form = document.getElementById('daliForm');
+        const btn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.innerText = '資料傳送中...';
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    alert('大理國際已收到您的評估需求，專屬顧問將於 24 小時內與您聯繫！');
+                    btn.disabled = false;
+                    btn.innerText = '送出評估 · 開啟澳洲職人之路';
+                    form.reset();
+                })
+                .catch(error => {
+                    alert('傳送失敗，請直接聯繫大理官方 LINE。');
+                    btn.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html>
